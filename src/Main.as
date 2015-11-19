@@ -1,4 +1,4 @@
-package
+﻿package
 {
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
@@ -10,7 +10,7 @@ package
 	
 	/**
 	 * ...
-	 * @author Erwin Henraat
+	 * @author Rowy Donker
 	 */
 	public class Main extends MovieClip 
 	{
