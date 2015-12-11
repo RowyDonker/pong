@@ -55,7 +55,7 @@
 		
 		private function restart(e:TimerEvent):void 
 		{
-			_movement = MovementCalculator.calculateMovement(6 + Math.random() * 10, Math.random() *40*180);
+			_movement = MovementCalculator.calculateMovement(6 + Math.random() * 10, Math.random() *45);
 			if (_movement.x > 0 && _movement.x < 2) _movement.x += 2;
 			if (_movement.x < 0 && _movement.x > -2) _movement.x -= 2;
 		}

@@ -108,7 +108,7 @@
 		
 		private function checkScore():void 
 		{
-			if (scoreboard.player1 >= 20 || scoreboard.player2 >= 20)
+			if (scoreboard.player1 >= 10 || scoreboard.player2 >= 10)
 			{
 				destroy();
 				dispatchEvent(new Event(GAME_OVER));

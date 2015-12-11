@@ -8,7 +8,7 @@
 	 */
 	public class Screen extends MovieClip
 	{
-		[Embed(source = "../../lib/starjedi/Starjedi.ttf",
+		[Embed(source = "../../lib/starjedi/Dead Kansas 3.ttf",
 		fontName = "jedi", 
 		mimeType = "application/x-font", 
 		fontWeight="normal", 

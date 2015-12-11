@@ -38,7 +38,7 @@
 			playSound(3);
 		}
 		private function onBounce(e: Event): void {
-			playSound(0);
+			playSound(Math.floor(Math.random() * 3));
 		}
 		private function loadSound(file: String): void {
 			_sounds.push(new Sound(new URLRequest(file)));
