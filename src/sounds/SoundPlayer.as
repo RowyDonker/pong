@@ -1,4 +1,4 @@
-package sounds 
+﻿package sounds 
 {
 	import flash.media.Sound;
 	import flash.events.Event;
@@ -14,7 +14,7 @@ package sounds
 	public class SoundPlayer 
 	{
 		private var _sounds:Array = [];
-		private var _channel:SoundChannel;
+		private var _channels:Array = [];
 		private var _main:Main;
 		public function SoundPlayer(main:Main):void
 		{
@@ -34,6 +34,7 @@ package sounds
 		
 		private function onIntro(e:Event):void 
 		{
+			stopAllSounds();
 			playSound(4);
 		}
 		
@@ -43,7 +44,7 @@ package sounds
 		}		
 		private function onBounce(e:Event):void 
 		{
-			playSound(Math.floor(Math.random() * 3));
+			playSound(0);
 		}
 		private function loadSound(file:String):void
 		{
@@ -59,10 +60,20 @@ package sounds
 			else
 			{			
 				var transform:SoundTransform = new SoundTransform(volume, pan);
-				_channel = _sounds[index].play(0,loops);
+				_channels.push(_sounds[index].play(0, loops));
+     			_channels[_channels.length-1].soundTransform = transform;
 			}			
 		}	
-		
+		private function stopAllSounds():void
+	{
+			var amount:int = _channels.length;
+			for (var i:int = 0; i < amount; i++) 
+			{
+				_channels[i].stop();
+     		}
+     		_channels = [];
+			
+		}
 	}
 
 }

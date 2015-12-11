@@ -1,4 +1,4 @@
-package screens 
+﻿package screens 
 {
 	import flash.display.MovieClip;
 	import flash.text.TextFormat;
@@ -26,7 +26,7 @@ package screens
 		{
 			textFormat = new TextFormat();
 			textFormat.font = "jedi";
-			textFormat.size = 60;
+			textFormat.size = 40;
 			textFormat.color = 0xffffff;
 			
 			
