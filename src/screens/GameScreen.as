@@ -73,6 +73,13 @@
 					{
 						balls[i].xMove *= -1;
 						balls[i].x += balls[i].xMove / 2;
+												var dir:Number = balls[i].xMove / Math.abs(balls[i].xMove);
+						while (paddles[j].hitTestObject(balls[i]))
+						{
+							balls[i].x += dir;
+							
+						}
+						
 						
 						dispatchEvent(new Event(BALL_BOUNCE));
 					}

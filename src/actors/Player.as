@@ -1,4 +1,4 @@
-package actors 
+﻿package actors 
 {
 	import utils.Controller;	
 	import flash.events.Event;
